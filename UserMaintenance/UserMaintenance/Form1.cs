@@ -18,8 +18,7 @@ namespace UserMaintenance
         public Form1()
         {
             InitializeComponent();
-            lblLastName.Text = Resource1.fd; // label1
-            lblFirstName.Text = Resource1.FirstName; // label2
+            deleteBtn.Text = Resource1.Delete;
             btnAdd.Text = Resource1.Add; // button1
             writeFileBtn.Text = Resource1.WriteFile;
 
@@ -55,6 +54,11 @@ namespace UserMaintenance
                 }
             }
 
+        }
+
+        private void deleteBtn_Click(object sender, EventArgs e)
+        {
+            users.RemoveAt(listUsers.SelectedIndex);
         }
     }
 }
